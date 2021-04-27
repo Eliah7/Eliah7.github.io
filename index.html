@@ -18,10 +18,17 @@
       custom-element="amp-accordion"
       src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"
     ></script>
-    <title>Hello, AMPs</title>
+    <script
+      async
+      custom-element="amp-social-share"
+      src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"
+    ></script>
+
+    <title>Home &bull; Eliah Mbwilo</title>
+    <!-- bootstrap icons -->
     <link
-      rel="canonical"
-      href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
     <meta name="viewport" content="width=device-width" />
     <script type="application/ld+json">
@@ -116,20 +123,58 @@
   </head>
   <body>
     <header>
+      <!-- socials header section -->
+      <nav>
+        <ul style="list-style-type: none">
+          <li>
+            <i
+              class="bi-facebook"
+              style="font-size: 2rem; color: cornflowerblue"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="bi-twitter"
+              style="font-size: 2rem; color: cornflowerblue"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="bi-instagram"
+              style="font-size: 2rem; color: cornflowerblue"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="bi-linkedin"
+              style="font-size: 2rem; color: cornflowerblue"
+            ></i>
+          </li>
+        </ul>
+      </nav>
+      <!-- menu header section -->
       <amp-mega-menu id="mega-menu" height="50" layout="fixed-height">
         <nav>
           <ul>
             <!-- list of menu items here -->
             <li>
-              <h4 role="button">menu item</h4>
+              <h4 role="button">Me</h4>
               <div role="dialog">more content</div>
             </li>
             <li>
-              <h4 role="button">menu item</h4>
+              <h4 role="button">Competencies</h4>
               <div role="dialog">more content</div>
             </li>
             <li>
-              <h4 role="button">menu item</h4>
+              <h4 role="button">Experience</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">Projects</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">Honors</h4>
               <div role="dialog">more content</div>
             </li>
           </ul>
@@ -158,6 +203,7 @@
         height="400"
         width="800"
       ></amp-img>
+      <amp-social-share type="system" aria-label="Share"></amp-social-share>
     </main>
     <footer></footer>
   </body>
