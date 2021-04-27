@@ -90,6 +90,19 @@
     </style>
     <style amp-custom>
       /* any custom style goes here */
+      :root {
+        --primary: #1973f0;
+        --secondary: #4a4a4a;
+        --light: #ffffff;
+        --dark: #ffffff;
+        --white: #ffffff;
+      }
+      .bg-secondary {
+        background: var(--secondary);
+      }
+      .text-white {
+        color: var(--white);
+      }
       body {
         background-color: white;
       }
@@ -129,8 +142,8 @@
   <body>
     <header>
       <!-- socials header section -->
-      <nav>
-        <ul class="horizontal-list" style="list-style-type: none">
+      <nav class="bg-secondary">
+        <ul class="horizontal-list text-white" style="list-style-type: none">
           <li>
             <i
               class="bi-facebook"
