@@ -3,6 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-mega-menu"
+      src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-sidebar"
+      src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-accordion"
+      src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"
+    ></script>
     <title>Hello, AMPs</title>
     <link
       rel="canonical"
@@ -75,6 +90,18 @@
         background-color: gray;
         border: 1px solid black;
       }
+      .sidebar-open-btn {
+        font-size: 2em;
+        display: none;
+      }
+      @media (max-width: 500px) {
+        #mega-menu {
+          display: none;
+        }
+        .sidebar-open-btn {
+          display: block;
+        }
+      }
     </style>
     <noscript
       ><style amp-boilerplate>
@@ -88,11 +115,45 @@
     >
   </head>
   <body>
-    <header></header>
+    <header>
+      <amp-mega-menu id="mega-menu" height="50" layout="fixed-height">
+        <nav>
+          <ul>
+            <!-- list of menu items here -->
+            <li>
+              <h4 role="button">menu item</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">menu item</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">menu item</h4>
+              <div role="dialog">more content</div>
+            </li>
+          </ul>
+        </nav>
+      </amp-mega-menu>
+      <button class="sidebar-open-btn" on="tap:sidebar">=</button>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay">
+      <amp-accordion>
+        <!-- list of menu items here -->
+        <section>
+          <h4>menu item</h4>
+          <div>more content</div>
+        </section>
+        <section>
+          <h4>menu 1</h4>
+          <div>more 1</div>
+        </section>
+      </amp-accordion>
+    </amp-sidebar>
     <main>
       <h1>Welcome to the mobile web</h1>
       <amp-img
-        src="welcome.jpg"
+        src="https://picsum.photos/800"
         alt="Welcome"
         height="400"
         width="800"
