@@ -93,6 +93,11 @@
       body {
         background-color: white;
       }
+      ul.horizontal-list > li {
+        display: inline-block;
+        display: inline;
+        /* this fix is needed for IE7- */
+      }
       amp-img {
         background-color: gray;
         border: 1px solid black;
@@ -125,7 +130,7 @@
     <header>
       <!-- socials header section -->
       <nav>
-        <ul style="list-style-type: none">
+        <ul class="horizontal-list" style="list-style-type: none">
           <li>
             <i
               class="bi-facebook"
