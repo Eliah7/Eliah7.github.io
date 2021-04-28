@@ -100,6 +100,9 @@
         --space-1: 0.5rem; /* 8px */
         --space-4: 2rem; /* 32px */
       }
+      *:focus {
+        outline: var(--secondary);
+      }
       /* Styles for the flex layout based tabs */
       amp-selector[role="tablist"].tabs-with-flex [role="tab"] {
         flex-grow: 1;
@@ -191,69 +194,6 @@
         .sidebar-open-btn {
           display: block;
         }
-      }
-      /* bootstrap utilities */
-      .m-0 {
-        margin: 0;
-      }
-      .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .p-1 {
-        padding: 0.25rem;
-      }
-      .px-1 {
-        padding-right: 0.25rem;
-        padding-left: 0.25rem;
-      }
-      .py-1 {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-      }
-      .p-2 {
-        padding: 0.5rem;
-      }
-      .px-2 {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-      }
-      .py-2 {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-      .p-3 {
-        padding: 1rem;
-      }
-      .px-3 {
-        padding-right: 1rem;
-        padding-left: 1rem;
-      }
-      .py-3 {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
-      .p-4 {
-        padding: 1.5rem;
-      }
-      .px-4 {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-      }
-      .py-4 {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-      }
-      .p-5 {
-        padding: 3rem;
-      }
-      .px-5 {
-        padding-right: 3rem;
-        padding-left: 3rem;
-      }
-      .py-5 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
       }
       /* flexboxgrid css */
       .container-fluid,
@@ -1216,6 +1156,69 @@
           order: 1;
         }
       }
+      /* bootstrap utilities */
+      .m-0 {
+        margin: 0;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .p-1 {
+        padding: 0.25rem;
+      }
+      .px-1 {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+      }
+      .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .p-2 {
+        padding: 0.5rem;
+      }
+      .px-2 {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .p-3 {
+        padding: 1rem;
+      }
+      .px-3 {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+      .py-3 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .p-4 {
+        padding: 1.5rem;
+      }
+      .px-4 {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+      .py-4 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .p-5 {
+        padding: 3rem;
+      }
+      .px-5 {
+        padding-right: 3rem;
+        padding-left: 3rem;
+      }
+      .py-5 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
     </style>
     <noscript
       ><style amp-boilerplate>
@@ -1282,13 +1285,13 @@
       </section>
       <!-- menu header section -->
       <section class="bg-white">
-        <nav class="container row end-xs">
+        <nav class="container row end-xs mx-auto">
           <amp-selector
             class="tabs-with-selector col-md-8 col-lg-6 row around-xs"
             role="tablist"
             on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
             keyboard-select-mode="focus"
-            height="56"
+            height="50"
             layout="fixed-height"
           >
             <div
@@ -1350,7 +1353,7 @@
         </section>
       </amp-accordion>
     </amp-sidebar>
-    <main>
+    <main class="container">
       <amp-selector id="myTabPanels" class="tabpanels">
         <div
           id="sample3-tabpanel1"
@@ -1360,6 +1363,14 @@
           selected
         >
           Tab one content...
+          <h1>Welcome to the mobile web</h1>
+          <amp-img
+            src="https://picsum.photos/800"
+            alt="Welcome"
+            height="400"
+            width="800"
+            layout="responsive"
+          ></amp-img>
         </div>
         <div
           id="sample3-tabpanel2"
@@ -1377,19 +1388,27 @@
         >
           Tab three content...
         </div>
+        <div
+          id="sample3-tabpanel4"
+          role="tabpanel"
+          aria-labelledby="sample3-tab4"
+          option
+        >
+          Tab four content...
+        </div>
+        <div
+          id="sample3-tabpanel5"
+          role="tabpanel"
+          aria-labelledby="sample3-tab5"
+          option
+        >
+          Tab five content...
+        </div>
       </amp-selector>
-      <h1>Welcome to the mobile web</h1>
-      <amp-img
-        src="https://picsum.photos/800"
-        alt="Welcome"
-        height="400"
-        width="800"
-        layout="responsive"
-      ></amp-img>
       <amp-social-share type="system" aria-label="Share"></amp-social-share>
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="bg-secondary">
+      <div class="container py-5"></div>
     </footer>
   </body>
 </html>
