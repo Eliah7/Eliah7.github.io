@@ -1180,10 +1180,10 @@
     >
   </head>
   <body>
-    <div class="container">
-      <header class="shadow">
+    <header class="shadow">
+      <section class="bg-primary">
         <!-- socials header section -->
-        <nav class="bg-primary py-2">
+        <nav class="container py-2">
           <ul
             class="horizontal-list text-white m-0"
             style="list-style-type: none"
@@ -1230,60 +1230,68 @@
             </li>
           </ul>
         </nav>
-        <!-- menu header section -->
-        <amp-mega-menu id="mega-menu" height="50" layout="fixed-height">
-          <nav class="bg-white">
-            <ul class="">
-              <!-- list of menu items here -->
-              <li>
-                <h4 role="button">Me</h4>
-                <div role="dialog">more content</div>
-              </li>
-              <li>
-                <h4 role="button">Competencies</h4>
-                <div role="dialog">more content</div>
-              </li>
-              <li>
-                <h4 role="button">Experience</h4>
-                <div role="dialog">more content</div>
-              </li>
-              <li>
-                <h4 role="button">Projects</h4>
-                <div role="dialog">more content</div>
-              </li>
-              <li>
-                <h4 role="button">Honors</h4>
-                <div role="dialog">more content</div>
-              </li>
-            </ul>
-          </nav>
-        </amp-mega-menu>
-        <button class="sidebar-open-btn" on="tap:sidebar">=</button>
-      </header>
-      <amp-sidebar id="sidebar" layout="nodisplay">
-        <amp-accordion>
-          <!-- list of menu items here -->
-          <section>
-            <h4>menu item</h4>
-            <div>more content</div>
-          </section>
-          <section>
-            <h4>menu 1</h4>
-            <div>more 1</div>
-          </section>
-        </amp-accordion>
-      </amp-sidebar>
-      <main>
-        <h1>Welcome to the mobile web</h1>
-        <amp-img
-          src="https://picsum.photos/800"
-          alt="Welcome"
-          height="400"
-          width="800"
-        ></amp-img>
-        <amp-social-share type="system" aria-label="Share"></amp-social-share>
-      </main>
-      <footer></footer>
-    </div>
+      </section>
+      <!-- menu header section -->
+      <amp-mega-menu
+        id="mega-menu"
+        class="bg-white"
+        height="50"
+        layout="fixed-height"
+      >
+        <nav class="container">
+          <ul class="">
+            <!-- list of menu items here -->
+            <li>
+              <h4 role="button">Me</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">Competencies</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">Experience</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">Projects</h4>
+              <div role="dialog">more content</div>
+            </li>
+            <li>
+              <h4 role="button">Honors</h4>
+              <div role="dialog">more content</div>
+            </li>
+          </ul>
+        </nav>
+      </amp-mega-menu>
+      <button class="sidebar-open-btn" on="tap:sidebar">=</button>
+    </header>
+    <amp-sidebar id="sidebar" layout="nodisplay">
+      <amp-accordion>
+        <!-- list of menu items here -->
+        <section>
+          <h4>menu item</h4>
+          <div>more content</div>
+        </section>
+        <section>
+          <h4>menu 1</h4>
+          <div>more 1</div>
+        </section>
+      </amp-accordion>
+    </amp-sidebar>
+    <main>
+      <h1>Welcome to the mobile web</h1>
+      <amp-img
+        src="https://picsum.photos/800"
+        alt="Welcome"
+        height="400"
+        width="800"
+        layout="responsive"
+      ></amp-img>
+      <amp-social-share type="system" aria-label="Share"></amp-social-share>
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
   </body>
 </html>
