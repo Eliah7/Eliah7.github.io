@@ -143,6 +143,13 @@
           display: block;
         }
       }
+      /* flex classes */
+      .d-flex {
+        display: flex;
+      }
+      .justify-around {
+        justify-content: space-around;
+      }
       /* bootstrap utilities */
       .m-0 {
         margin: 0;
@@ -267,7 +274,7 @@
       <!-- menu header section -->
       <amp-mega-menu id="mega-menu" height="50" layout="fixed-height">
         <nav class="bg-white">
-          <ul>
+          <ul class="d-flex justify-around">
             <!-- list of menu items here -->
             <li>
               <h4 role="button">Me</h4>
