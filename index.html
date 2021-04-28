@@ -3,11 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script
-      async
-      custom-element="amp-mega-menu"
-      src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"
-    ></script>
     <!-- top tab menu -->
     <script
       async
@@ -102,7 +97,55 @@
         --light: #ffffff;
         --dark: #ffffff;
         --white: #ffffff;
+        --space-1: 0.5rem; /* 8px */
+        --space-4: 2rem; /* 32px */
       }
+      /* Styles for the flex layout based tabs */
+      amp-selector[role="tablist"].tabs-with-flex [role="tab"] {
+        flex-grow: 1;
+        /* custom styling, feel free to change */
+        text-align: center;
+        padding: var(--space-1);
+      }
+      amp-selector[role="tablist"].tabs-with-flex [role="tab"][selected] {
+        outline: none;
+        /* custom styling, feel free to change */
+        border-bottom: 2px solid var(--primary);
+      }
+      amp-selector[role="tablist"].tabs-with-flex [role="tabpanel"] {
+        display: none;
+        width: 100%;
+        order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+        /* custom styling, feel free to change */
+        padding: var(--space-4);
+      }
+      amp-selector[role="tablist"].tabs-with-flex
+        [role="tab"][selected]
+        + [role="tabpanel"] {
+        display: block;
+      }
+
+      /* Styles for the selector based tabs */
+      amp-selector[role="tablist"].tabs-with-selector [role="tab"][selected] {
+        outline: none;
+        /* custom styling, feel free to change */
+        border-bottom: 2px solid var(--primary);
+      }
+      amp-selector[role="tablist"].tabs-with-selector [role="tab"] {
+        /* custom styling, feel free to change */
+        text-align: center;
+        padding: var(--space-1);
+      }
+      amp-selector.tabpanels [role="tabpanel"] {
+        display: none;
+        /* custom styling, feel free to change */
+        padding: var(--space-4);
+      }
+      amp-selector.tabpanels [role="tabpanel"][selected] {
+        outline: none;
+        display: block;
+      }
+      /*  */
       .bg-primary {
         background: var(--primary);
       }
@@ -1238,38 +1281,60 @@
         </nav>
       </section>
       <!-- menu header section -->
-      <amp-mega-menu
-        id="mega-menu"
-        class="bg-white"
-        height="50"
-        layout="fixed-height"
-      >
+      <section class="bg-white">
         <nav class="container row end-xs">
-          <ul class="col-md-8 col-lg-6 row around-xs">
-            <!-- list of menu items here -->
-            <li>
-              <h4 style="border-bottom: 2px solid" role="button">Profile</h4>
-              <div role="dialog">more content</div>
-            </li>
-            <li>
-              <h4 role="button">Competencies</h4>
-              <div role="dialog">more content</div>
-            </li>
-            <li>
-              <h4 role="button">Experience</h4>
-              <div role="dialog">more content</div>
-            </li>
-            <li>
-              <h4 role="button">Projects</h4>
-              <div role="dialog">more content</div>
-            </li>
-            <li>
-              <h4 role="button">Honors</h4>
-              <div role="dialog">more content</div>
-            </li>
-          </ul>
+          <amp-selector
+            class="tabs-with-selector col-md-8 col-lg-6 row around-xs"
+            role="tablist"
+            on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
+            keyboard-select-mode="focus"
+            height="56"
+            layout="fixed-height"
+          >
+            <div
+              id="sample3-tab1"
+              role="tab"
+              aria-controls="sample3-tabpanel1"
+              option="0"
+              selected
+            >
+              Profile
+            </div>
+            <div
+              id="sample3-tab2"
+              role="tab"
+              aria-controls="sample3-tabpanel2"
+              option="1"
+            >
+              Competencies
+            </div>
+            <div
+              id="sample3-tab3"
+              role="tab"
+              aria-controls="sample3-tabpanel3"
+              option="2"
+            >
+              Experience
+            </div>
+            <div
+              id="sample3-tab4"
+              role="tab"
+              aria-controls="sample3-tabpanel4"
+              option="3"
+            >
+              Projects
+            </div>
+            <div
+              id="sample3-tab5"
+              role="tab"
+              aria-controls="sample3-tabpanel5"
+              option="4"
+            >
+              Honors
+            </div>
+          </amp-selector>
         </nav>
-      </amp-mega-menu>
+      </section>
       <button class="sidebar-open-btn" on="tap:sidebar">=</button>
     </header>
     <amp-sidebar id="sidebar" layout="nodisplay">
@@ -1286,6 +1351,33 @@
       </amp-accordion>
     </amp-sidebar>
     <main>
+      <amp-selector id="myTabPanels" class="tabpanels">
+        <div
+          id="sample3-tabpanel1"
+          role="tabpanel"
+          aria-labelledby="sample3-tab1"
+          option
+          selected
+        >
+          Tab one content...
+        </div>
+        <div
+          id="sample3-tabpanel2"
+          role="tabpanel"
+          aria-labelledby="sample3-tab2"
+          option
+        >
+          Tab two content...
+        </div>
+        <div
+          id="sample3-tabpanel3"
+          role="tabpanel"
+          aria-labelledby="sample3-tab3"
+          option
+        >
+          Tab three content...
+        </div>
+      </amp-selector>
       <h1>Welcome to the mobile web</h1>
       <amp-img
         src="https://picsum.photos/800"
