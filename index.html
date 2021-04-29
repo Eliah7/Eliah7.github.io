@@ -197,6 +197,9 @@
       .items-stretch {
         align-items: stretch;
       }
+      .card {
+        padding: 2rem;
+      }
       amp-img {
         background-color: gray;
         border: 1px solid black;
@@ -241,20 +244,6 @@
         flex-wrap: wrap;
         margin-right: -0.5rem;
         margin-left: -0.5rem;
-      }
-
-      .row.reverse {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse;
-      }
-
-      .col.reverse {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
       }
 
       .col-xs,
@@ -986,7 +975,7 @@
 
             <div class="row mt-2">
               <div class="col-md-6 flex items-stretch">
-                <div class="info-box">
+                <div class="card">
                   <i class="bx bx-map"></i>
                   <h3>My Address</h3>
                   <p>A108 Adam Street, New York, NY 535022</p>
@@ -994,7 +983,7 @@
               </div>
 
               <div class="col-md-6 mt-4 mt-md-0 flex items-stretch">
-                <div class="info-box">
+                <div class="card">
                   <i class="bx bx-share-alt"></i>
                   <h3>Social Profiles</h3>
                   <div class="social-links">
@@ -1018,14 +1007,14 @@
               </div>
 
               <div class="col-md-6 mt-4 flex items-stretch">
-                <div class="info-box">
+                <div class="card">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Me</h3>
                   <p>contact@example.com</p>
                 </div>
               </div>
               <div class="col-md-6 mt-4 flex items-stretch">
-                <div class="info-box">
+                <div class="card">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Me</h3>
                   <p>+1 5589 55488 55</p>
