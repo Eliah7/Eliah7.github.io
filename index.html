@@ -199,6 +199,7 @@
       }
       .card {
         padding: 2rem;
+        width: 100%;
       }
       amp-img {
         background-color: gray;
@@ -769,6 +770,9 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .p-0 {
+        padding: 0;
+      }
       .p-1 {
         padding: 0.25rem;
       }
@@ -988,25 +992,53 @@
               </div>
               <div class="col-md-6 flex items-stretch mb-3">
                 <div class="card shadow">
-                  <i class="bx bx-share-alt"></i>
+                  <i class="bi bi-share-alt"></i>
                   <h3>Social Profiles</h3>
-                  <div class="social-links">
-                    <a href="#" class="twitter"
-                      ><i class="bi bi-twitter"></i
-                    ></a>
-                    <a href="#" class="facebook"
-                      ><i class="bi bi-facebook"></i
-                    ></a>
-                    <a href="#" class="instagram"
-                      ><i class="bi bi-instagram"></i
-                    ></a>
-                    <a href="#" class="google-plus"
-                      ><i class="bi bi-skype"></i
-                    ></a>
-                    <a href="#" class="linkedin"
-                      ><i class="bi bi-linkedin"></i
-                    ></a>
-                  </div>
+                  <ul
+                    class="horizontal-list text-primary p-0 m-0"
+                    style="list-style-type: none"
+                  >
+                    <li class="px-1">
+                      <a
+                        href=""
+                        class="text-decoration-none"
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        <i class="bi-facebook" style="font-size: 1.2rem"></i
+                      ></a>
+                    </li>
+                    <li class="px-1">
+                      <a
+                        href=""
+                        class="text-decoration-none"
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        <i class="bi-twitter" style="font-size: 1.2rem"></i>
+                      </a>
+                    </li>
+                    <li class="px-1">
+                      <a
+                        href=""
+                        class="text-decoration-none"
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        <i class="bi-instagram" style="font-size: 1.2rem"></i>
+                      </a>
+                    </li>
+                    <li class="px-1">
+                      <a
+                        href=""
+                        class="text-decoration-none"
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        <i class="bi-linkedin" style="font-size: 1.2rem"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="col-md-6 flex items-stretch mb-3">
