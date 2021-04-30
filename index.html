@@ -2,6 +2,10 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta
+        name="amp-script-src"
+        content="sha384-YCFs8k-ouELcBTgzKzNAujZFxygwiqimSqKK7JqeKaGNflwDxaC3g2toj7s_kxWG"
+      />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!-- top tab menu -->
     <script
@@ -239,7 +243,7 @@
         display: block;
         top: 0;
         left: 0;
-        z-index: 0;
+        z-index: 2;
       }
       @media (max-width: 500px) {
         #mega-menu {
@@ -833,13 +837,9 @@
       </style></noscript
     >
   </head>
-  <body>
-    <amp-script
-      src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js
-    "
-      width="100%"
-      height="100%"
-    >
+  <body class="bg-secondary">
+    <amp-script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js">
+      <amp-script width="800" height="800" script="particles-script">
       <!-- <amp-img
         style="z-index: -1"
         src="background.png"
@@ -1254,5 +1254,18 @@
       </footer>
       <canvas class="background"></canvas>
     </amp-script>
+    </amp-script>
+    <script id="particles-script" type="text/plain" target="amp-script">
+      window.
+onload
+= function() {
+  Particles.
+init
+({
+    selector: 
+'.background'
+  });
+};
+    </script>
   </body>
 </html>
