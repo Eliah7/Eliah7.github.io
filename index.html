@@ -124,6 +124,7 @@
           #434343,
           #000000
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: var(--white);
       }
       div {
         box-sizing: border-box;
@@ -256,7 +257,9 @@
         display: block;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
       }
       @media (max-width: 500px) {
         #mega-menu {
@@ -850,7 +853,7 @@
       </style></noscript
     >
   </head>
-  <body class="bg-secondary">
+  <body class="">
     <amp-script layout="container" script="particles-script">
       <!-- <amp-img
         style="z-index: -1"
