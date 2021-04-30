@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta
-        name="amp-script-src"
-        content="sha384-YCFs8k-ouELcBTgzKzNAujZFxygwiqimSqKK7JqeKaGNflwDxaC3g2toj7s_kxWG"
-      />
+      name="amp-script-src"
+      content="sha384-OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb"
+    />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!-- top tab menu -->
     <script
@@ -838,8 +838,7 @@
     >
   </head>
   <body class="bg-secondary">
-    <amp-script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js">
-      <amp-script width="800" height="800" script="particles-script">
+    <amp-script layout="container" script="particles-script">
       <!-- <amp-img
         style="z-index: -1"
         src="background.png"
@@ -1254,18 +1253,11 @@
       </footer>
       <canvas class="background"></canvas>
     </amp-script>
-    </amp-script>
-    <script id="particles-script" type="text/plain" target="amp-script">
-      window.
-onload
-= function() {
-  Particles.
-init
-({
-    selector: 
-'.background'
-  });
-};
-    </script>
+    <script
+      id="particles-script"
+      type="text/javascript"
+      target="amp-script"
+      src="particles.min.js"
+    ></script>
   </body>
 </html>
