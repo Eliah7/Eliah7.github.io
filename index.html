@@ -205,6 +205,9 @@
       .flex {
         display: flex;
       }
+      .flex-fill {
+        flex: 1;
+      }
       .inline-flex {
         display: inline-flex;
       }
@@ -981,15 +984,16 @@
           option
           selected
         >
-          Tab one content...
-          <h1>Welcome to the mobile web</h1>
-          <amp-img
-            src="https://picsum.photos/800"
-            alt="Welcome"
-            height="400"
-            width="800"
-            layout="responsive"
-          ></amp-img>
+          <amp-layout layout="container" class="flex flex-fill">
+            <h1>Welcome to the mobile web</h1>
+            <amp-img
+              src="https://picsum.photos/800"
+              alt="Welcome"
+              height="400"
+              width="800"
+              layout="responsive"
+            ></amp-img>
+          </amp-layout>
         </div>
         <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1" option>
           Tab one content...
