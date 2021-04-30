@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html amp lang="en" amp4ads>
   <head>
     <meta charset="utf-8" />
     <meta
@@ -109,6 +109,10 @@
         --space-1: 0.5rem; /* 8px */
         --space-4: 2rem; /* 32px */
       }
+      html,
+      body {
+        height: 100%;
+      }
       *:focus {
         outline: var(--secondary);
       }
@@ -125,6 +129,8 @@
           #000000
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         color: var(--white);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
       }
       div {
         box-sizing: border-box;
@@ -856,7 +862,7 @@
       </style></noscript
     >
   </head>
-  <body class="">
+  <body amp4ads>
     <!-- <amp-img
         style="z-index: -1"
         src="background.png"
@@ -984,12 +990,61 @@
           option
           selected
         >
-          <amp-layout
-            layout="container"
-            height="600"
-            class="flex flex-fill flex-column center-xs"
-          >
-            <h1>Mbwix</h1>
+          <amp-layout layout="container">
+            <h1>Eliah Mbwilo</h1>
+            <h2>
+              I'm a passionate
+              <span style="border-bottom: 2px solid var(--primary)"
+                >computer scientist</span
+              >
+            </h2>
+            <section>
+              <ul
+                class="horizontal-list text-primary p-0 m-0"
+                style="list-style-type: none"
+              >
+                <li class="px-1">
+                  <a
+                    href=""
+                    class="text-decoration-none"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                  >
+                    <i class="bi-facebook" style="font-size: 1.2rem"></i
+                  ></a>
+                </li>
+                <li class="px-1">
+                  <a
+                    href=""
+                    class="text-decoration-none"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                  >
+                    <i class="bi-twitter" style="font-size: 1.2rem"></i>
+                  </a>
+                </li>
+                <li class="px-1">
+                  <a
+                    href=""
+                    class="text-decoration-none"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                  >
+                    <i class="bi-instagram" style="font-size: 1.2rem"></i>
+                  </a>
+                </li>
+                <li class="px-1">
+                  <a
+                    href=""
+                    class="text-decoration-none"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                  >
+                    <i class="bi-linkedin" style="font-size: 1.2rem"></i>
+                  </a>
+                </li>
+              </ul>
+            </section>
           </amp-layout>
         </div>
         <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1" option>
