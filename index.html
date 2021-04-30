@@ -175,7 +175,7 @@
         padding: var(--space-1);
       }
       amp-selector.tabpanels {
-        height: inherit;
+        min-height: calc(100% - 100px);
       }
       amp-selector.tabpanels [role="tabpanel"] {
         display: none;
@@ -1237,20 +1237,20 @@
         </div>
       </amp-selector>
       <amp-social-share type="system" aria-label="Share"></amp-social-share>
-      <footer class="bg-primary">
-        <div class="container py-3">
-          <div class="text-white text-center">
-            <small
-              >&copy;
-              <a class="text-decoration-none" href="https://larven.co.tz"
-                >Larven</a
-              >
-              2021. All rights reserved.</small
-            >
-          </div>
-        </div>
-      </footer>
     </main>
+    <footer class="bg-primary">
+      <div class="container py-3">
+        <div class="text-white text-center">
+          <small
+            >&copy;
+            <a class="text-decoration-none" href="https://larven.co.tz"
+              >Larven</a
+            >
+            2021. All rights reserved.</small
+          >
+        </div>
+      </div>
+    </footer>
     <amp-script style="z-index: -1" layout="fill" script="particles-script">
       <canvas class="background"></canvas>
     </amp-script>
