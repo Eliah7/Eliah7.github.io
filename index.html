@@ -863,7 +863,7 @@
         layout="fill"
       ></amp-img> -->
     <header class="shadow">
-      <section class="">
+      <amp-layout layout="container">
         <!-- socials header section -->
         <nav class="container py-2">
           <ul
@@ -912,9 +912,9 @@
             </li>
           </ul>
         </nav>
-      </section>
+      </amp-layout>
       <!-- menu header section -->
-      <section class="bg-white">
+      <amp-layout layout="container" class="bg-white">
         <nav class="container row end-xs mx-auto">
           <amp-selector
             class="tabs-with-selector col-md-8 col-lg-6 row around-xs"
@@ -955,7 +955,7 @@
             </div>
           </amp-selector>
         </nav>
-      </section>
+      </amp-layout>
       <button class="sidebar-open-btn" on="tap:sidebar">=</button>
     </header>
     <amp-sidebar id="sidebar" layout="nodisplay">
