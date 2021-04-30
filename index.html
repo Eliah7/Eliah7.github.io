@@ -110,9 +110,11 @@
         --space-4: 2rem; /* 32px */
       }
       html,
-      body,
-      main {
+      body {
         height: 100%;
+      }
+      main {
+        min-height: 100%;
       }
       *:focus {
         outline: var(--secondary);
@@ -175,7 +177,8 @@
         padding: var(--space-1);
       }
       amp-selector.tabpanels {
-        height: calc(100% - 100px);
+        height: 100%;
+        min-height: calc(100% - 100px);
       }
       amp-selector.tabpanels [role="tabpanel"] {
         display: none;
