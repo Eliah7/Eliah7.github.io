@@ -184,7 +184,7 @@
       }
       amp-selector.tabpanels [role="tabpanel"][selected] {
         outline: none;
-        display: block;
+        display: flex;
       }
       /*  */
       .bg-primary {
@@ -217,6 +217,7 @@
       }
       .flex-fill {
         flex: 1;
+        height: 100%;
       }
       .inline-flex {
         display: inline-flex;
@@ -919,12 +920,13 @@
       <amp-selector id="myTabPanels" class="tabpanels">
         <div
           id="tabpanel0"
+          class="flex-fill middle-xs"
           role="tabpanel"
           aria-labelledby="tab0"
           option
           selected
         >
-          <amp-layout layout="container">
+          <amp-layout layout="container" class="">
             <h1>Eliah Mbwilo</h1>
             <h2>
               I'm a passionate
@@ -1235,20 +1237,20 @@
         </div>
       </amp-selector>
       <amp-social-share type="system" aria-label="Share"></amp-social-share>
-    </main>
-    <footer class="bg-primary">
-      <div class="container py-3">
-        <div class="text-white text-center">
-          <small
-            >&copy;
-            <a class="text-decoration-none" href="https://larven.co.tz"
-              >Larven</a
+      <footer class="bg-primary">
+        <div class="container py-3">
+          <div class="text-white text-center">
+            <small
+              >&copy;
+              <a class="text-decoration-none" href="https://larven.co.tz"
+                >Larven</a
+              >
+              2021. All rights reserved.</small
             >
-            2021. All rights reserved.</small
-          >
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </main>
     <amp-script style="z-index: -1" layout="fill" script="particles-script">
       <canvas class="background"></canvas>
     </amp-script>
