@@ -291,13 +291,19 @@
         height: 100%;
         width: 100%;
       }
+      .resume-item {
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+      }
       .resume-item::before {
         content: "";
         position: absolute;
         width: 16px;
         height: 16px;
         border-radius: 50px;
-        left: -9px;
+        left: -10px;
         top: 0;
         background: var(--primary);
         border: 2px solid var(--primary);
@@ -1163,9 +1169,9 @@
         <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3" option>
           <!-- experiences section -->
           <amp-layout layout="container">
-            <div class="resume-item pb-0">
+            <div class="resume-item">
               <h4 class="text-primary uppercase">Alice Barkley</h4>
-              <p>
+              <p style="line-height: 24px">
                 <em
                   >Innovative and deadline-driven Graphic Designer with 3+ years
                   of experience designing and developing user-centered
@@ -1176,7 +1182,9 @@
               <p></p>
               <ul>
                 <li>Portland par 127,Orlando, FL</li>
+                <br />
                 <li>(123) 456-7891</li>
+                <br />
                 <li>alice.barkley@example.com</li>
               </ul>
               <p></p>
