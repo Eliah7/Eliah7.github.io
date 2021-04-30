@@ -234,6 +234,12 @@
       .shadow {
         box-shadow: 0 0 5px 2px rgb(0 0 0 / 10%);
       }
+      blockquote {
+        border: none;
+        border-left: 4px solid var(--primary);
+        font-size: 1.5rem;
+        padding-left: 1.5rem;
+      }
       progress {
         display: flex;
         height: 0.75rem;
@@ -947,18 +953,18 @@
           selected
         >
           <amp-layout layout="container" class="">
-            <h1>Eliah Mbwilo</h1>
-            <h2>
-              I'm a passionate
-              <span style="border-bottom: 2px solid var(--primary)"
-                >computer scientist</span
-              >
-            </h2>
-            <br />
-            <blockquote class="ampstart-pullquote" cite="http://example.org">
-              "Morbi vulputate purus sodales dapibus ultrices. Donec commodo
-              condimentum enim, eget congue dui dapibus vel. Pellentesque
-              porttitor sit amet justo eu scelerisque."
+            <div class="row bottom-xs">
+              <h1>Eliah Mbwilo&ensp;-&ensp;</h1>
+              <h2>
+                <span style="border-bottom: 2px solid var(--primary)"
+                  >Computer Scientist</span
+                >
+              </h2>
+            </div>
+            <blockquote>
+              Proficient computer scientist interested in designing and creating
+              system architectures that are maintainable, reliable, robust, and
+              most importantly intelligent.
             </blockquote>
             <br />
             <section>
