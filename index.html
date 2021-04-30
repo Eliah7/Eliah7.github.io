@@ -234,6 +234,13 @@
         font-size: 2em;
         display: none;
       }
+      .background {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
       @media (max-width: 500px) {
         #mega-menu {
           display: none;
@@ -827,406 +834,425 @@
     >
   </head>
   <body>
-    <amp-img
-      style="z-index: -1"
-      src="background.png"
-      alt="Background"
-      height="100%"
+    <amp-script
+      src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js
+    "
       width="100%"
-      layout="fill"
-    ></amp-img>
-    <header class="shadow">
-      <section class="">
-        <!-- socials header section -->
-        <nav class="container py-2">
-          <ul
-            class="horizontal-list text-white m-0"
-            style="list-style-type: none"
-          >
-            <li class="px-1">
-              <a
-                href=""
-                class="text-decoration-none"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <i class="bi-facebook" style="font-size: 1.2rem"></i
-              ></a>
-            </li>
-            <li class="px-1">
-              <a
-                href=""
-                class="text-decoration-none"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <i class="bi-twitter" style="font-size: 1.2rem"></i>
-              </a>
-            </li>
-            <li class="px-1">
-              <a
-                href=""
-                class="text-decoration-none"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <i class="bi-instagram" style="font-size: 1.2rem"></i>
-              </a>
-            </li>
-            <li class="px-1">
-              <a
-                href=""
-                class="text-decoration-none"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <i class="bi-linkedin" style="font-size: 1.2rem"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-      <!-- menu header section -->
-      <section class="bg-white">
-        <nav class="container row end-xs mx-auto">
-          <amp-selector
-            class="tabs-with-selector col-md-8 col-lg-6 row around-xs"
-            role="tablist"
-            on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
-            keyboard-select-mode="focus"
-            height="50"
-            layout="fixed-height"
-          >
-            <div
-              id="tab1"
-              role="tab"
-              aria-controls="tabpanel1"
-              option="0"
-              selected
+      height="100%"
+    >
+      <!-- <amp-img
+        style="z-index: -1"
+        src="background.png"
+        alt="Background"
+        height="100%"
+        width="100%"
+        layout="fill"
+      ></amp-img> -->
+      <header class="shadow">
+        <section class="">
+          <!-- socials header section -->
+          <nav class="container py-2">
+            <ul
+              class="horizontal-list text-white m-0"
+              style="list-style-type: none"
             >
-              Profile
-            </div>
-            <div
-              id="competencies"
-              role="tab"
-              aria-controls="tabpanel2"
-              option="1"
+              <li class="px-1">
+                <a
+                  href=""
+                  class="text-decoration-none"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <i class="bi-facebook" style="font-size: 1.2rem"></i
+                ></a>
+              </li>
+              <li class="px-1">
+                <a
+                  href=""
+                  class="text-decoration-none"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <i class="bi-twitter" style="font-size: 1.2rem"></i>
+                </a>
+              </li>
+              <li class="px-1">
+                <a
+                  href=""
+                  class="text-decoration-none"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <i class="bi-instagram" style="font-size: 1.2rem"></i>
+                </a>
+              </li>
+              <li class="px-1">
+                <a
+                  href=""
+                  class="text-decoration-none"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <i class="bi-linkedin" style="font-size: 1.2rem"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <!-- menu header section -->
+        <section class="bg-white">
+          <nav class="container row end-xs mx-auto">
+            <amp-selector
+              class="tabs-with-selector col-md-8 col-lg-6 row around-xs"
+              role="tablist"
+              on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
+              keyboard-select-mode="focus"
+              height="50"
+              layout="fixed-height"
             >
-              Competencies
-            </div>
-            <div id="tab3" role="tab" aria-controls="tabpanel3" option="2">
-              Experience
-            </div>
-            <div id="tab4" role="tab" aria-controls="tabpanel4" option="3">
-              Projects
-            </div>
-            <div id="tab5" role="tab" aria-controls="tabpanel5" option="4">
-              Honors
-            </div>
-            <div id="contacts" role="tab" aria-controls="tabpanel6" option="5">
-              Contacts
-            </div>
-          </amp-selector>
-        </nav>
-      </section>
-      <button class="sidebar-open-btn" on="tap:sidebar">=</button>
-    </header>
-    <amp-sidebar id="sidebar" layout="nodisplay">
-      <amp-accordion>
-        <!-- list of menu items here -->
-        <section>
-          <h4>menu item</h4>
-          <div>more content</div>
+              <div
+                id="tab1"
+                role="tab"
+                aria-controls="tabpanel1"
+                option="0"
+                selected
+              >
+                Profile
+              </div>
+              <div
+                id="competencies"
+                role="tab"
+                aria-controls="tabpanel2"
+                option="1"
+              >
+                Competencies
+              </div>
+              <div id="tab3" role="tab" aria-controls="tabpanel3" option="2">
+                Experience
+              </div>
+              <div id="tab4" role="tab" aria-controls="tabpanel4" option="3">
+                Projects
+              </div>
+              <div id="tab5" role="tab" aria-controls="tabpanel5" option="4">
+                Honors
+              </div>
+              <div
+                id="contacts"
+                role="tab"
+                aria-controls="tabpanel6"
+                option="5"
+              >
+                Contacts
+              </div>
+            </amp-selector>
+          </nav>
         </section>
-        <section>
-          <h4>menu 1</h4>
-          <div>more 1</div>
-        </section>
-      </amp-accordion>
-    </amp-sidebar>
-    <main class="container">
-      <amp-selector id="myTabPanels" class="tabpanels">
-        <div
-          id="tabpanel1"
-          role="tabpanel"
-          aria-labelledby="tab1"
-          option
-          selected
-        >
-          Tab one content...
-          <h1>Welcome to the mobile web</h1>
-          <amp-img
-            src="https://picsum.photos/800"
-            alt="Welcome"
-            height="400"
-            width="800"
-            layout="responsive"
-          ></amp-img>
-        </div>
-        <div
-          id="tabpanel2"
-          role="tabpanel"
-          aria-labelledby="competencies"
-          option
-        >
-          <div style="margin: 2rem">
-            <!-- skills section -->
-            <section>
-              <div class="inline-flex flex-column mb-3">
-                <h2 style="margin-bottom: 0.25rem">Competencies</h2>
-                <div class="bg-primary" style="height: 2px"></div>
-              </div>
-              <div class="row">
-                <div class="col-xs col-md-6">
-                  <div>
-                    <div class="row between-xs mb-2">
-                      <span class="col-xs">HTML</span
-                      ><i class="col-xs" style="text-align: end">100%</i>
-                    </div>
-                    <progress
-                      role="progressbar"
-                      value="100"
-                      max="100"
-                    ></progress>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="row between-xs mb-2">
-                      <span class="col-xs">CSS</span
-                      ><i class="col-xs" style="text-align: end">90%</i>
-                    </div>
-                    <progress
-                      role="progressbar"
-                      value="90"
-                      max="100"
-                    ></progress>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="row between-xs mb-2">
-                      <span class="col-xs">JavaScript</span
-                      ><i class="col-xs" style="text-align: end">75%</i>
-                    </div>
-                    <progress
-                      role="progressbar"
-                      value="75"
-                      max="100"
-                    ></progress>
-                  </div>
-                </div>
-                <div class="col-xs col-md-6">
-                  <div>
-                    <div class="row between-xs mb-2">
-                      <span class="col-xs">PHP</span
-                      ><i class="col-xs" style="text-align: end">80%</i>
-                    </div>
-                    <progress
-                      role="progressbar"
-                      value="80"
-                      max="100"
-                    ></progress>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="row between-xs mb-2">
-                      <span class="col-xs">WordPress</span
-                      ><i class="col-xs" style="text-align: end">90%</i>
-                    </div>
-                    <progress
-                      role="progressbar"
-                      value="90"
-                      max="100"
-                    ></progress>
-                  </div>
-                  <br />
-                  <div>
-                    <div class="row between-xs mb-2">
-                      <span class="col-xs">Photoshop</span
-                      ><i class="col-xs" style="text-align: end">55%</i>
-                    </div>
-                    <progress
-                      role="progressbar"
-                      value="55"
-                      max="100"
-                    ></progress>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <br />
-            <!-- interests section -->
-            <section>
-              <div class="inline-flex flex-column mb-3">
-                <h2 style="margin-bottom: 0.25rem">Interests</h2>
-                <div class="bg-primary" style="height: 2px"></div>
-              </div>
-              <div class="row">
-                <div class="col-lg-3 col-md-4">
-                  <div class="card shadow">
-                    <i class="ri-store-line" style="color: #ffbb2c"></i>
-                    <h3 class="m-0">Lorem Ipsum</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-                  <div class="card shadow">
-                    <i class="ri-bar-chart-box-line" style="color: #5578ff"></i>
-                    <h3 class="m-0">Dolor Sitema</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-                  <div class="card shadow">
-                    <i class="ri-calendar-todo-line" style="color: #e80368"></i>
-                    <h3 class="m-0">Sed perspiciatis</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-                  <div class="card shadow">
-                    <i class="ri-paint-brush-line" style="color: #e361ff"></i>
-                    <h3 class="m-0">Magni Dolores</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                  <div class="card shadow">
-                    <i class="ri-database-2-line" style="color: #47aeff"></i>
-                    <h3 class="m-0">Nemo Enim</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                  <div class="card shadow">
-                    <i class="ri-gradienter-line" style="color: #ffa76e"></i>
-                    <h3 class="m-0">Eiusmod Tempor</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                  <div class="card shadow">
-                    <i class="ri-file-list-3-line" style="color: #11dbcf"></i>
-                    <h3 class="m-0">Midela Teren</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4">
-                  <div class="card shadow">
-                    <i class="ri-price-tag-2-line" style="color: #4233ff"></i>
-                    <h3 class="m-0">Pira Neve</h3>
-                  </div>
-                  <br />
-                </div>
-              </div>
-            </section>
+        <button class="sidebar-open-btn" on="tap:sidebar">=</button>
+      </header>
+      <amp-sidebar id="sidebar" layout="nodisplay">
+        <amp-accordion>
+          <!-- list of menu items here -->
+          <section>
+            <h4>menu item</h4>
+            <div>more content</div>
+          </section>
+          <section>
+            <h4>menu 1</h4>
+            <div>more 1</div>
+          </section>
+        </amp-accordion>
+      </amp-sidebar>
+      <main class="container">
+        <amp-selector id="myTabPanels" class="tabpanels">
+          <div
+            id="tabpanel1"
+            role="tabpanel"
+            aria-labelledby="tab1"
+            option
+            selected
+          >
+            Tab one content...
+            <h1>Welcome to the mobile web</h1>
+            <amp-img
+              src="https://picsum.photos/800"
+              alt="Welcome"
+              height="400"
+              width="800"
+              layout="responsive"
+            ></amp-img>
           </div>
-        </div>
-        <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3" option>
-          Tab three content...
-        </div>
-        <div id="tabpanel4" role="tabpanel" aria-labelledby="tab4" option>
-          Tab four content...
-        </div>
-        <div id="tabpanel5" role="tabpanel" aria-labelledby="tab5" option>
-          Tab five content...
-        </div>
-        <div id="tabpanel6" role="tabpanel" aria-labelledby="contacts" option>
-          <div style="margin: 2rem">
-            <div class="inline-flex flex-column mb-3">
-              <h2 style="margin-bottom: 0.25rem">Contacts</h2>
-              <div class="bg-primary" style="height: 2px"></div>
-            </div>
-            <div class="row between-xs">
-              <div class="col-md-6 flex items-stretch mb-3">
-                <div class="card shadow">
-                  <i class="bx bx-map"></i>
-                  <h3>My Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+          <div
+            id="tabpanel2"
+            role="tabpanel"
+            aria-labelledby="competencies"
+            option
+          >
+            <div style="margin: 2rem">
+              <!-- skills section -->
+              <section>
+                <div class="inline-flex flex-column mb-3">
+                  <h2 style="margin-bottom: 0.25rem">Competencies</h2>
+                  <div class="bg-primary" style="height: 2px"></div>
                 </div>
-              </div>
-              <div class="col-md-6 flex items-stretch mb-3">
-                <div class="card shadow">
-                  <i class="bi bi-share-alt"></i>
-                  <h3>Social Profiles</h3>
-                  <ul
-                    class="horizontal-list text-primary p-0 m-0"
-                    style="list-style-type: none"
-                  >
-                    <li class="px-1">
-                      <a
-                        href=""
-                        class="text-decoration-none"
-                        target="_blank"
-                        rel="nofollow noreferrer"
-                      >
-                        <i class="bi-facebook" style="font-size: 1.2rem"></i
-                      ></a>
-                    </li>
-                    <li class="px-1">
-                      <a
-                        href=""
-                        class="text-decoration-none"
-                        target="_blank"
-                        rel="nofollow noreferrer"
-                      >
-                        <i class="bi-twitter" style="font-size: 1.2rem"></i>
-                      </a>
-                    </li>
-                    <li class="px-1">
-                      <a
-                        href=""
-                        class="text-decoration-none"
-                        target="_blank"
-                        rel="nofollow noreferrer"
-                      >
-                        <i class="bi-instagram" style="font-size: 1.2rem"></i>
-                      </a>
-                    </li>
-                    <li class="px-1">
-                      <a
-                        href=""
-                        class="text-decoration-none"
-                        target="_blank"
-                        rel="nofollow noreferrer"
-                      >
-                        <i class="bi-linkedin" style="font-size: 1.2rem"></i>
-                      </a>
-                    </li>
-                  </ul>
+                <div class="row">
+                  <div class="col-xs col-md-6">
+                    <div>
+                      <div class="row between-xs mb-2">
+                        <span class="col-xs">HTML</span
+                        ><i class="col-xs" style="text-align: end">100%</i>
+                      </div>
+                      <progress
+                        role="progressbar"
+                        value="100"
+                        max="100"
+                      ></progress>
+                    </div>
+                    <br />
+                    <div>
+                      <div class="row between-xs mb-2">
+                        <span class="col-xs">CSS</span
+                        ><i class="col-xs" style="text-align: end">90%</i>
+                      </div>
+                      <progress
+                        role="progressbar"
+                        value="90"
+                        max="100"
+                      ></progress>
+                    </div>
+                    <br />
+                    <div>
+                      <div class="row between-xs mb-2">
+                        <span class="col-xs">JavaScript</span
+                        ><i class="col-xs" style="text-align: end">75%</i>
+                      </div>
+                      <progress
+                        role="progressbar"
+                        value="75"
+                        max="100"
+                      ></progress>
+                    </div>
+                  </div>
+                  <div class="col-xs col-md-6">
+                    <div>
+                      <div class="row between-xs mb-2">
+                        <span class="col-xs">PHP</span
+                        ><i class="col-xs" style="text-align: end">80%</i>
+                      </div>
+                      <progress
+                        role="progressbar"
+                        value="80"
+                        max="100"
+                      ></progress>
+                    </div>
+                    <br />
+                    <div>
+                      <div class="row between-xs mb-2">
+                        <span class="col-xs">WordPress</span
+                        ><i class="col-xs" style="text-align: end">90%</i>
+                      </div>
+                      <progress
+                        role="progressbar"
+                        value="90"
+                        max="100"
+                      ></progress>
+                    </div>
+                    <br />
+                    <div>
+                      <div class="row between-xs mb-2">
+                        <span class="col-xs">Photoshop</span
+                        ><i class="col-xs" style="text-align: end">55%</i>
+                      </div>
+                      <progress
+                        role="progressbar"
+                        value="55"
+                        max="100"
+                      ></progress>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6 flex items-stretch mb-3">
-                <div class="card shadow">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Me</h3>
-                  <p>contact@example.com</p>
+              </section>
+              <br />
+              <!-- interests section -->
+              <section>
+                <div class="inline-flex flex-column mb-3">
+                  <h2 style="margin-bottom: 0.25rem">Interests</h2>
+                  <div class="bg-primary" style="height: 2px"></div>
                 </div>
-              </div>
-              <div class="col-md-6 flex items-stretch mb-3">
-                <div class="card shadow">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Me</h3>
-                  <p>+1 5589 55488 55</p>
+                <div class="row">
+                  <div class="col-lg-3 col-md-4">
+                    <div class="card shadow">
+                      <i class="ri-store-line" style="color: #ffbb2c"></i>
+                      <h3 class="m-0">Lorem Ipsum</h3>
+                    </div>
+                    <br />
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="card shadow">
+                      <i
+                        class="ri-bar-chart-box-line"
+                        style="color: #5578ff"
+                      ></i>
+                      <h3 class="m-0">Dolor Sitema</h3>
+                    </div>
+                    <br />
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="card shadow">
+                      <i
+                        class="ri-calendar-todo-line"
+                        style="color: #e80368"
+                      ></i>
+                      <h3 class="m-0">Sed perspiciatis</h3>
+                    </div>
+                    <br />
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                    <div class="card shadow">
+                      <i class="ri-paint-brush-line" style="color: #e361ff"></i>
+                      <h3 class="m-0">Magni Dolores</h3>
+                    </div>
+                    <br />
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="card shadow">
+                      <i class="ri-database-2-line" style="color: #47aeff"></i>
+                      <h3 class="m-0">Nemo Enim</h3>
+                    </div>
+                    <br />
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="card shadow">
+                      <i class="ri-gradienter-line" style="color: #ffa76e"></i>
+                      <h3 class="m-0">Eiusmod Tempor</h3>
+                    </div>
+                    <br />
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="card shadow">
+                      <i class="ri-file-list-3-line" style="color: #11dbcf"></i>
+                      <h3 class="m-0">Midela Teren</h3>
+                    </div>
+                    <br />
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="card shadow">
+                      <i class="ri-price-tag-2-line" style="color: #4233ff"></i>
+                      <h3 class="m-0">Pira Neve</h3>
+                    </div>
+                    <br />
+                  </div>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
-      </amp-selector>
-      <amp-social-share type="system" aria-label="Share"></amp-social-share>
-    </main>
-    <footer class="bg-primary">
-      <div class="container py-3">
-        <div class="text-white text-center">
-          <small
-            >&copy;
-            <a class="text-decoration-none" href="https://larven.co.tz"
-              >Larven</a
+          <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3" option>
+            Tab three content...
+          </div>
+          <div id="tabpanel4" role="tabpanel" aria-labelledby="tab4" option>
+            Tab four content...
+          </div>
+          <div id="tabpanel5" role="tabpanel" aria-labelledby="tab5" option>
+            Tab five content...
+          </div>
+          <div id="tabpanel6" role="tabpanel" aria-labelledby="contacts" option>
+            <div style="margin: 2rem">
+              <div class="inline-flex flex-column mb-3">
+                <h2 style="margin-bottom: 0.25rem">Contacts</h2>
+                <div class="bg-primary" style="height: 2px"></div>
+              </div>
+              <div class="row between-xs">
+                <div class="col-md-6 flex items-stretch mb-3">
+                  <div class="card shadow">
+                    <i class="bx bx-map"></i>
+                    <h3>My Address</h3>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex items-stretch mb-3">
+                  <div class="card shadow">
+                    <i class="bi bi-share-alt"></i>
+                    <h3>Social Profiles</h3>
+                    <ul
+                      class="horizontal-list text-primary p-0 m-0"
+                      style="list-style-type: none"
+                    >
+                      <li class="px-1">
+                        <a
+                          href=""
+                          class="text-decoration-none"
+                          target="_blank"
+                          rel="nofollow noreferrer"
+                        >
+                          <i class="bi-facebook" style="font-size: 1.2rem"></i
+                        ></a>
+                      </li>
+                      <li class="px-1">
+                        <a
+                          href=""
+                          class="text-decoration-none"
+                          target="_blank"
+                          rel="nofollow noreferrer"
+                        >
+                          <i class="bi-twitter" style="font-size: 1.2rem"></i>
+                        </a>
+                      </li>
+                      <li class="px-1">
+                        <a
+                          href=""
+                          class="text-decoration-none"
+                          target="_blank"
+                          rel="nofollow noreferrer"
+                        >
+                          <i class="bi-instagram" style="font-size: 1.2rem"></i>
+                        </a>
+                      </li>
+                      <li class="px-1">
+                        <a
+                          href=""
+                          class="text-decoration-none"
+                          target="_blank"
+                          rel="nofollow noreferrer"
+                        >
+                          <i class="bi-linkedin" style="font-size: 1.2rem"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 flex items-stretch mb-3">
+                  <div class="card shadow">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Me</h3>
+                    <p>contact@example.com</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex items-stretch mb-3">
+                  <div class="card shadow">
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Call Me</h3>
+                    <p>+1 5589 55488 55</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </amp-selector>
+        <amp-social-share type="system" aria-label="Share"></amp-social-share>
+      </main>
+      <footer class="bg-primary">
+        <div class="container py-3">
+          <div class="text-white text-center">
+            <small
+              >&copy;
+              <a class="text-decoration-none" href="https://larven.co.tz"
+                >Larven</a
+              >
+              2021. All rights reserved.</small
             >
-            2021. All rights reserved.</small
-          >
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+      <canvas class="background"></canvas>
+    </amp-script>
   </body>
 </html>
