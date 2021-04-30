@@ -219,6 +219,9 @@
         color: inherit;
         text-decoration: none;
       }
+      .uppercase {
+        text-transform: uppercase;
+      }
       .flex {
         display: flex;
       }
@@ -287,6 +290,17 @@
         z-index: -1;
         height: 100%;
         width: 100%;
+      }
+      .resume-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -9px;
+        top: 0;
+        background: var(--primary);
+        border: 2px solid var(--primary);
       }
       @media (max-width: 500px) {
         #mega-menu {
@@ -1150,7 +1164,7 @@
           <!-- experiences section -->
           <amp-layout layout="container">
             <div class="resume-item pb-0">
-              <h4>Alice Barkley</h4>
+              <h4 class="text-primary uppercase">Alice Barkley</h4>
               <p>
                 <em
                   >Innovative and deadline-driven Graphic Designer with 3+ years
