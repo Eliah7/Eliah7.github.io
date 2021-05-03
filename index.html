@@ -347,6 +347,7 @@
       }
 
       .col-xs,
+      .col-auto,
       .col-xs-6,
       .col-xs-12 {
         box-sizing: border-box;
@@ -399,22 +400,10 @@
         text-align: end;
       }
 
-      .top-xs {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-      }
-
       .middle-xs {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-      }
-
-      .bottom-xs {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
       }
 
       .around-xs {
@@ -532,22 +521,10 @@
           text-align: end;
         }
 
-        .top-md {
-          -webkit-box-align: start;
-          -ms-flex-align: start;
-          align-items: flex-start;
-        }
-
         .middle-md {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-        }
-
-        .bottom-md {
-          -webkit-box-align: end;
-          -ms-flex-align: end;
-          align-items: flex-end;
         }
 
         .around-md {
@@ -627,13 +604,6 @@
           max-width: 83.33333333%;
         }
 
-        .start-lg {
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: flex-start;
-          text-align: start;
-        }
-
         .center-lg {
           -webkit-box-pack: center;
           -ms-flex-pack: center;
@@ -648,22 +618,10 @@
           text-align: end;
         }
 
-        .top-lg {
-          -webkit-box-align: start;
-          -ms-flex-align: start;
-          align-items: flex-start;
-        }
-
         .middle-lg {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-        }
-
-        .bottom-lg {
-          -webkit-box-align: end;
-          -ms-flex-align: end;
-          align-items: flex-end;
         }
 
         .around-lg {
@@ -993,106 +951,100 @@
               <div class="row">
                 <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
                   <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
                   >
                     <i
-                      class="bi-cpu"
+                      class="col-auto bi-cpu"
                       style="font-size: 1.8rem; color: #ffbb2c"
                     ></i>
-                    <h3 class="m-0">Machine Learning</h3>
+                    <h3 class="col-xs m-0">Machine Learning</h3>
                   </div>
-                  <br />
-                </div>
-                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
-                  <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
-                  >
-                    <i
-                      class="bi-diagram-3"
-                      style="font-size: 1.8rem; color: #5578ff"
-                    ></i>
-                    <h3 class="m-0">Deep Learning</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
-                  <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
-                  >
-                    <i
-                      class="bi-node-plus"
-                      style="font-size: 1.8rem; color: #e80368"
-                    ></i>
-                    <h3 class="m-0">Reinforcement Learning</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
-                  <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
-                  >
-                    <i
-                      class="bi-layout-text-window-reverse"
-                      style="font-size: 1.8rem; color: #e361ff"
-                    ></i>
-                    <h3 class="m-0">Web and UX design</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
-                  <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
-                  >
-                    <i
-                      class="bi-server"
-                      style="font-size: 1.8rem; color: #47aeff"
-                    ></i>
-                    <h3 class="m-0">Back end web development</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
-                  <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
-                  >
-                    <i
-                      class="bi-phone-fill"
-                      style="font-size: 1.8rem; color: #ffa76e"
-                    ></i>
-                    <h3 class="m-0">Android native app development</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
-                  <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
-                  >
-                    <i
-                      class="bi-phone"
-                      style="font-size: 1.8rem; color: #11dbcf"
-                    ></i>
-                    <h3 class="m-0">iOS native app development(Swift)</h3>
-                  </div>
-                  <br />
-                </div>
-                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
-                  <div
-                    class="flex middle-xs around-xs card shadow bg-secondary h-100"
-                  >
-                    <i
-                      class="bi-phone-landscape"
-                      style="font-size: 1.8rem; color: #4233ff"
-                    ></i>
-                    <h3 class="m-0">Hybrid app development</h3>
-                  </div>
-                  <br />
                 </div>
                 <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
                   <div
                     class="row middle-xs around-xs card shadow bg-secondary h-100"
                   >
                     <i
-                      class="col-xs bi-terminal"
+                      class="col-auto bi-diagram-3"
+                      style="font-size: 1.8rem; color: #5578ff"
+                    ></i>
+                    <h3 class="col-xs m-0">Deep Learning</h3>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
+                  <div
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
+                  >
+                    <i
+                      class="col-auto bi-node-plus"
+                      style="font-size: 1.8rem; color: #e80368"
+                    ></i>
+                    <h3 class="col-xs m-0">Reinforcement Learning</h3>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
+                  <div
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
+                  >
+                    <i
+                      class="col-auto bi-layout-text-window-reverse"
+                      style="font-size: 1.8rem; color: #e361ff"
+                    ></i>
+                    <h3 class="col-xs m-0">Web and UX design</h3>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
+                  <div
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
+                  >
+                    <i
+                      class="col-auto bi-server"
+                      style="font-size: 1.8rem; color: #47aeff"
+                    ></i>
+                    <h3 class="col-xs m-0">Back end web development</h3>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
+                  <div
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
+                  >
+                    <i
+                      class="col-auto bi-phone-fill"
+                      style="font-size: 1.8rem; color: #ffa76e"
+                    ></i>
+                    <h3 class="col-xs m-0">Android native app development</h3>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
+                  <div
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
+                  >
+                    <i
+                      class="col-auto bi-phone"
+                      style="font-size: 1.8rem; color: #11dbcf"
+                    ></i>
+                    <h3 class="col-xs m-0">
+                      iOS native app development(Swift)
+                    </h3>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
+                  <div
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
+                  >
+                    <i
+                      class="col-auto bi-phone-landscape"
+                      style="font-size: 1.8rem; color: #4233ff"
+                    ></i>
+                    <h3 class="col-xs m-0">Hybrid app development</h3>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-lg-3 col-md-4 mb-3">
+                  <div
+                    class="row middle-xs around-xs card shadow bg-secondary h-100"
+                  >
+                    <i
+                      class="col-auto bi-terminal"
                       style="font-size: 1.8rem; color: #ff335f"
                     ></i>
                     <h3 class="col-xs m-0">API Design and Development</h3>
@@ -1103,7 +1055,7 @@
                     class="row middle-xs around-xs card shadow bg-secondary h-100"
                   >
                     <i
-                      class="col-xs bi-stack"
+                      class="col-auto bi-stack"
                       style="font-size: 1.8rem; color: #33f8ff"
                     ></i>
                     <h3 class="col-xs m-0">
