@@ -1427,11 +1427,64 @@
         </div>
         <!-- honors panel -->
         <div id="tabpanel6" role="tabpanel" aria-labelledby="honors" option>
-          Tab five content...
+          <amp-layout
+            layout="container"
+            id="content"
+            class="gallery-base-content fit"
+          >
+            <div class="inline-flex flex-column mb-3">
+              <h2 style="margin-bottom: 0.25rem">Honors</h2>
+              <div class="bg-primary" style="height: 2px"></div>
+            </div>
+            <section>
+              <amp-carousel
+                width="100vw"
+                height="100vh"
+                controls=""
+                class="gallery-landing-wall block relative"
+              >
+                <div class="gallery-landing-wall-scroll relative">
+                  <figure
+                    class="gallery-landing-image-wrapped gallery-landing-image-wrap"
+                  >
+                    <a
+                      href="./gallery-inner.amp.html"
+                      class="gallery-landing-image-link"
+                    ></a>
+                    <figcaption
+                      class="gallery-landing-image-caption gallery-landing-image-caption-bottom gallery-landing-image-caption-extraleft gallery-landing-image-caption-content"
+                    >
+                      <h2 class="h4 regular">Modern Caesar</h2>
+                      <h3 class="h4 regular" role="author">Sylvia Johnson</h3>
+                      <a
+                        href="./gallery-inner.amp.html"
+                        class="gallery-landing-caption-link inline-block"
+                        >View Exhibit</a
+                      >
+                    </figcaption>
+                    <div class="gallery-landing-image-transform">
+                      <amp-img
+                        width="8"
+                        height="12"
+                        layout="responsive"
+                        noloading=""
+                        src="../img/gallery/chair.jpg"
+                        srcset="
+                ../img/gallery/chair.jpg 1x,
+                ../img/gallery/chair@2x.jpg 2x
+              "
+                        alt="wooden chair"
+                      ></amp-img>
+                    </div>
+                  </figure>
+                </div>
+              </amp-carousel>
+            </section>
+          </amp-layout>
         </div>
         <!-- contacts panel -->
         <div id="tabpanel7" role="tabpanel" aria-labelledby="contacts" option>
-          <div style="margin: 2rem">
+          <amp-layout layout="container">
             <div class="inline-flex flex-column mb-3">
               <h2 style="margin-bottom: 0.25rem">Contacts</h2>
               <div class="bg-primary" style="height: 2px"></div>
@@ -1531,8 +1584,8 @@
                   <p>+255 743 127 744</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> </amp-layout
+          >>
         </div>
       </amp-selector>
       <amp-social-share type="system" aria-label="Share"></amp-social-share>
