@@ -904,12 +904,13 @@
       <button class="sidebar-open-btn" on="tap:sidebar">=</button>
     </header>
     <amp-sidebar id="sidebar" layout="nodisplay">
-      <amp-accordion
+      <amp-selector
+        class="tabs-with-selector"
         role="tablist"
         on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
         keyboard-select-mode="focus"
+        layout="container"
       >
-        <!-- list of menu items here -->
         <div
           id="profile"
           role="tab"
@@ -919,14 +920,9 @@
         >
           Profile
         </div>
-        <section
-          id="competencies"
-          role="tab"
-          aria-controls="tabpanel2"
-          option="1"
-        >
+        <div id="competencies" role="tab" aria-controls="tabpanel2" option="1">
           Competencies
-        </section>
+        </div>
         <div id="experiences" role="tab" aria-controls="tabpanel3" option="2">
           Experience
         </div>
@@ -942,7 +938,7 @@
         <div id="contacts" role="tab" aria-controls="tabpanel7" option="6">
           Contacts
         </div>
-      </amp-accordion>
+      </amp-selector>
     </amp-sidebar>
     <main class="container">
       <amp-selector id="myTabPanels" class="tabpanels">
