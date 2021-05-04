@@ -827,14 +827,20 @@
             height="50"
             layout="fixed-height"
           >
-            <div
+            <!-- <div
               id="tab0"
               role="tab"
               aria-controls="tabpanel1"
               option="0"
               selected
-            ></div>
-            <div id="tab1" role="tab" aria-controls="tabpanel1" option="1">
+            ></div> -->
+            <div
+              id="profile"
+              role="tab"
+              aria-controls="tabpanel1"
+              option="1"
+              selected
+            >
               Profile
             </div>
             <div
@@ -885,11 +891,21 @@
     </amp-sidebar>
     <main class="container">
       <amp-selector id="myTabPanels" class="tabpanels">
-        <div
+        <!-- <div
           id="tabpanel0"
-          class="flex-fill middle-xs"
           role="tabpanel"
           aria-labelledby="tab0"
+          option
+          selected
+        >
+          Initial tab content...
+        </div> -->
+        <!-- profile panel -->
+        <div
+          id="tabpanel1"
+          class="flex-fill middle-xs"
+          role="tabpanel"
+          aria-labelledby="profile"
           option
           selected
         >
@@ -917,10 +933,6 @@
               </ul>
             </blockquote>
           </amp-layout>
-        </div>
-        <!-- profile panel -->
-        <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1" option>
-          Tab one content...
         </div>
         <!-- competencies panel -->
         <div
@@ -1455,7 +1467,7 @@
                         class="cover"
                         style="transform: rotate(-90deg)"
                         layout="fill"
-                        src="eliah-girls-ict-award-3.jpeg"
+                        src="eliah-girls-ict-award-3.jpg"
                         alt="Girls in ICT trainees"
                       ></amp-img>
                     </div>
@@ -1473,7 +1485,7 @@
                         class="cover"
                         style="transform: rotate(-90deg)"
                         layout="fill"
-                        src="eliah-girls-ict-award-2.jpeg"
+                        src="eliah-girls-ict-award-2.jpg"
                         alt="Girls in ICT award"
                       ></amp-img>
                     </div>
@@ -1489,7 +1501,7 @@
                         class="cover"
                         style="transform: rotate(-90deg)"
                         layout="fill"
-                        src="eliah-girls-ict-award.jpeg"
+                        src="eliah-girls-ict-award.jpg"
                         alt="Girls in ICT certificate"
                       ></amp-img>
                     </div>
