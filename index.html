@@ -310,6 +310,10 @@
       .project:hover .icon i {
         color: var(--primary);
       }
+      button {
+        border-radius: 0.25rem;
+        border: transparent;
+      }
       amp-img {
         background-color: gray;
         border: 1px solid black;
@@ -899,13 +903,20 @@
               Contacts
             </div>
           </amp-selector>
+          <button
+            class="sidebar-open-btn"
+            style="background: transparent"
+            on="tap:sidebar"
+          >
+            <i class="bi-list text-white" style="font-size: 2rem"></i>
+          </button>
         </nav>
       </amp-layout>
-      <button class="sidebar-open-btn" on="tap:sidebar">=</button>
     </header>
     <amp-sidebar id="sidebar" layout="nodisplay">
       <amp-selector
         class="tabs-with-selector"
+        style="background: rgba(0, 0, 0, 0.8)"
         role="tablist"
         on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
         keyboard-select-mode="focus"
