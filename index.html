@@ -903,41 +903,47 @@
       </amp-layout>
       <button class="sidebar-open-btn" on="tap:sidebar">=</button>
     </header>
-    <amp-sidebar id="sidebar" layout="nodisplay">
-      <amp-accordion
+    <amp-sidebar
+      id="sidebar"
+      layout="nodisplay"
+      role="tablist"
+      on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
+      keyboard-select-mode="focus"
+    >
+      <!-- <amp-accordion
         role="tablist"
         on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
         keyboard-select-mode="focus"
+      > -->
+      <!-- list of menu items here -->
+      <div
+        id="profile"
+        role="tab"
+        aria-controls="tabpanel1"
+        option="0"
+        selected
       >
-        <!-- list of menu items here -->
-        <div
-          id="profile"
-          role="tab"
-          aria-controls="tabpanel1"
-          option="0"
-          selected
-        >
-          Profile
-        </div>
-        <div id="competencies" role="tab" aria-controls="tabpanel2" option="1">
-          Competencies
-        </div>
-        <div id="experiences" role="tab" aria-controls="tabpanel3" option="2">
-          Experience
-        </div>
-        <div id="projects" role="tab" aria-controls="tabpanel4" option="3">
-          Projects
-        </div>
-        <div id="education" role="tab" aria-controls="tabpanel5" option="4">
-          Education
-        </div>
-        <div id="honors" role="tab" aria-controls="tabpanel6" option="5">
-          Honors
-        </div>
-        <div id="contacts" role="tab" aria-controls="tabpanel7" option="6">
-          Contacts
-        </div>
-      </amp-accordion>
+        Profile
+      </div>
+      <div id="competencies" role="tab" aria-controls="tabpanel2" option="1">
+        Competencies
+      </div>
+      <div id="experiences" role="tab" aria-controls="tabpanel3" option="2">
+        Experience
+      </div>
+      <div id="projects" role="tab" aria-controls="tabpanel4" option="3">
+        Projects
+      </div>
+      <div id="education" role="tab" aria-controls="tabpanel5" option="4">
+        Education
+      </div>
+      <div id="honors" role="tab" aria-controls="tabpanel6" option="5">
+        Honors
+      </div>
+      <div id="contacts" role="tab" aria-controls="tabpanel7" option="6">
+        Contacts
+      </div>
+      <!-- </amp-accordion> -->
     </amp-sidebar>
     <main class="container">
       <amp-selector id="myTabPanels" class="tabpanels">
