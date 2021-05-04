@@ -752,7 +752,7 @@
         width="100%"
         layout="fill"
       ></amp-img> -->
-    <header class="shadow">
+    <header class="shadow" style="background: rgba(0, 0, 0, 0.8)">
       <amp-layout layout="container">
         <!-- socials header section -->
         <nav class="container py-2">
@@ -1390,7 +1390,24 @@
         </div>
         <!-- projects panel -->
         <div id="tabpanel4" role="tabpanel" aria-labelledby="projects" option>
-          Tab four content...
+          <amp-layout
+            layout="container"
+            style="background: rgba(0, 0, 0, 0.8)"
+            class="w-100"
+          >
+            <div class="inline-flex flex-column mb-3">
+              <h2 style="margin-bottom: 0.25rem">Projects</h2>
+              <div class="bg-primary" style="height: 2px"></div>
+            </div>
+            <section class="row">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-0">
+                <article
+                  class="card shadow h-100"
+                  style="background: rgba(204, 204, 204, 0.1)"
+                ></article>
+              </div>
+            </section>
+          </amp-layout>
         </div>
         <!-- education panel -->
         <div id="tabpanel5" role="tabpanel" aria-labelledby="education" option>
@@ -1452,9 +1469,27 @@
               <h2 style="margin-bottom: 0.25rem">Honors</h2>
               <div class="bg-primary" style="height: 2px"></div>
             </div>
+            <!-- Girls in ICT honors section -->
             <section>
+              <p
+                class="m-0 p-3"
+                style="
+                  background-color: #43b35c;
+                  border-bottom: 2px solid var(--primary);
+                "
+              >
+                <a
+                  href="https://www.linkedin.com/posts/activity-6714863540806676481-gUBb"
+                  class="text-decoration-none"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  >Appreciation Award for Volunteering Services as Trainer in
+                  the Girls in ICT Program hosted by the University of Dar es
+                  Salaam, Dlab, and the ICT Commision of Tanzania.</a
+                >
+              </p>
               <article class="row">
-                <figure class="col-xs col-md-4 col-lg-3 m-0">
+                <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-0">
                   <div class="gallery-fixed-container">
                     <amp-img
                       class="cover"
@@ -1467,7 +1502,7 @@
                     Posing with trainees
                   </figcaption>
                 </figure>
-                <figure class="col-xs col-md-4 col-lg-3 m-0">
+                <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-0">
                   <div class="gallery-fixed-container">
                     <amp-img
                       class="cover"
@@ -1480,7 +1515,7 @@
                     Girls in ICT award
                   </figcaption>
                 </figure>
-                <figure class="col-xs col-md-4 col-lg-3 m-0">
+                <figure class="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-0">
                   <div class="gallery-fixed-container">
                     <amp-img
                       class="cover"
