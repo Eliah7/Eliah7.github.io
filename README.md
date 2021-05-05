@@ -2,7 +2,7 @@
 
 Portfolio Template
 
-## Technologies
+## Tools
 
 - [AMP](https://amp.dev)
 - [Flexbox Grid](http://flexboxgrid.com/)
