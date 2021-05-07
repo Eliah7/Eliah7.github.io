@@ -316,7 +316,10 @@
       }
       amp-img {
         background-color: gray;
-        border: 1px solid black;
+        border: 1px solid #ccc;
+      }
+      .border-transparent {
+        border: 0px solid transparent;
       }
       .sidebar-open-btn {
         font-size: 2em;
@@ -774,14 +777,6 @@
     >
   </head>
   <body amp4ads>
-    <!-- <amp-img
-        style="z-index: -1"
-        src="background.png"
-        alt="Background"
-        height="100%"
-        width="100%"
-        layout="fill"
-      ></amp-img> -->
     <header class="shadow" style="background: rgba(0, 0, 0, 0.8)">
       <amp-layout layout="container">
         <!-- socials header section -->
@@ -992,40 +987,29 @@
               system architectures that are maintainable, reliable, robust, and
               most importantly intelligent.
             </blockquote>
-            <blockquote style="margin-left: 0">
-              I have the:
-              <br />
-              <ul>
-                <li>Ability to work well with others in a team or alone.</li>
-                <li>
-                  Ability to analyze software and hardware to find solutions
-                  that meet user requirements.
-                </li>
-                <li>
-                  Ability to perform review of programs to improve efficiency,
-                  correct errors, and verify operational capability.
-                </li>
-              </ul>
-            </blockquote>
             <section class="row">
               <article class="col-xs-12 col-md-6 flex middle-xs center-xs p-5">
                 <h3>Ability to work well with others in a team or alone.</h3>
               </article>
-              <div class="col-xs-12 col-md-6 gallery-fixed-container p-5">
-                <amp-img
-                  class="contain"
-                  layout="fill"
-                  src="team-work.svg"
-                  alt="Team work"
-                ></amp-img>
+              <div class="col-xs-12 col-md-6 p-5 bg-white">
+                <figure class="gallery-fixed-container m-0">
+                  <amp-img
+                    class="contain bg-white border-transparent"
+                    layout="fill"
+                    src="team-work.svg"
+                    alt="Team work"
+                  ></amp-img>
+                </figure>
               </div>
-              <div class="col-xs-12 col-md-6 gallery-fixed-container p-5">
-                <amp-img
-                  class="contain"
-                  layout="fill"
-                  src="software-analysis.svg"
-                  alt="Software and hardware analysis"
-                ></amp-img>
+              <div class="col-xs-12 col-md-6 p-5 bg-white">
+                <figure class="gallery-fixed-container m-0">
+                  <amp-img
+                    class="contain bg-white border-transparent"
+                    layout="fill"
+                    src="software-analysis.svg"
+                    alt="Software and hardware analysis"
+                  ></amp-img>
+                </figure>
               </div>
               <article class="col-xs-12 col-md-6 flex middle-xs center-xs p-5">
                 <h3>
@@ -1039,13 +1023,15 @@
                   correct errors, and verify operational capability.
                 </h3>
               </article>
-              <div class="col-xs-12 col-md-6 gallery-fixed-container p-5">
-                <amp-img
-                  class="contain"
-                  layout="fill"
-                  src="programs-review.svg"
-                  alt="Programs review"
-                ></amp-img>
+              <div class="col-xs-12 col-md-6 p-5 bg-white">
+                <figure class="gallery-fixed-container m-0">
+                  <amp-img
+                    class="contain bg-white border-transparent"
+                    layout="fill"
+                    src="programs-review.svg"
+                    alt="Programs review"
+                  ></amp-img>
+                </figure>
               </div>
             </section>
           </amp-layout>
